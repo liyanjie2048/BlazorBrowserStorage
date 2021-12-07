@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E0F27CCE-65BA-428A-876C-EE2D7ECB79EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Liyanjie.Blazor.BrowserStorage", "src\BlazorBrowserStorage\Liyanjie.Blazor.BrowserStorage.csproj", "{3D5D76E4-0CDF-4575-8C5C-6E8E31D62A74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3FD8A30B-9190-42A4-9EBB-74F8CB01CDB1}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D5D76E4-0CDF-4575-8C5C-6E8E31D62A74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D5D76E4-0CDF-4575-8C5C-6E8E31D62A74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D5D76E4-0CDF-4575-8C5C-6E8E31D62A74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D5D76E4-0CDF-4575-8C5C-6E8E31D62A74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3D5D76E4-0CDF-4575-8C5C-6E8E31D62A74} = {E0F27CCE-65BA-428A-876C-EE2D7ECB79EB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D4379B9-A5C2-482E-87C9-7AA2D8BCBF65}
+	EndGlobalSection
+EndGlobal
