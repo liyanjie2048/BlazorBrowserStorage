@@ -1,6 +1,6 @@
-# Liyanjie.Blazor.BrowserStorage
+ï»¿# Liyanjie.Blazor.BrowserStorage
 
-Blazorä¯ÀÀÆ÷´æ´¢
+Blazoræµè§ˆå™¨å­˜å‚¨
 
 - #### 
   - Usage
