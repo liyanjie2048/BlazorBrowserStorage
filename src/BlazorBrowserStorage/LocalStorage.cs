@@ -4,5 +4,5 @@ namespace Liyanjie.Blazor.BrowserStorage;
 
 public class LocalStorage : BrowserStorage
 {
-    public LocalStorage(IJSRuntime jsRuntime) : base("localStorage", jsRuntime) { }
+    public LocalStorage(IJSRuntime jsRuntime, bool base64Encode) : base("localStorage", jsRuntime, base64Encode) { }
 }

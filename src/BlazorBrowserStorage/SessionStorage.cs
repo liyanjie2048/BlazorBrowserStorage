@@ -4,5 +4,5 @@ namespace Liyanjie.Blazor.BrowserStorage;
 
 public class SessionStorage : BrowserStorage
 {
-    public SessionStorage(IJSRuntime jsRuntime) : base("sessionStorage", jsRuntime) { }
+    public SessionStorage(IJSRuntime jsRuntime, bool base64Encode) : base("sessionStorage", jsRuntime, base64Encode) { }
 }

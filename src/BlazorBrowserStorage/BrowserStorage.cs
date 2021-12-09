@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Text;
+using System.Text.Json;
 
 using Microsoft.JSInterop;
 
@@ -8,14 +9,19 @@ public abstract class BrowserStorage
 {
     readonly string _storageName;
     readonly IJSRuntime _jsRuntime;
+    readonly bool _base64Encode;
 
-    protected BrowserStorage(string storeName, IJSRuntime jsRuntime)
+    protected BrowserStorage(
+        string storeName,
+        IJSRuntime jsRuntime,
+        bool base64Encode)
     {
         if (string.IsNullOrEmpty(storeName))
             throw new ArgumentException("The value cannot be null or empty", nameof(storeName));
 
         _storageName = storeName;
         _jsRuntime = jsRuntime ?? throw new ArgumentNullException(nameof(jsRuntime));
+        _base64Encode = base64Encode;
     }
 
     public ValueTask SetAsync<TValue>(string key, TValue? value)
@@ -24,6 +30,8 @@ public abstract class BrowserStorage
             throw new ArgumentException("Cannot be null or empty", nameof(key));
 
         var json = JsonSerializer.Serialize(value);
+        if (_base64Encode)
+            json = Convert.ToBase64String(Encoding.UTF8.GetBytes(json));
         return _jsRuntime.InvokeVoidAsync($"{_storageName}.setItem", key, json);
     }
 
@@ -35,6 +43,8 @@ public abstract class BrowserStorage
 
         try
         {
+            if (_base64Encode)
+                json = Encoding.UTF8.GetString(Convert.FromBase64String(json));
             return JsonSerializer.Deserialize<TValue>(json);
         }
         catch
